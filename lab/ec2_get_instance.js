@@ -1,0 +1,27 @@
+//ec2_get_instance
+
+var AWS = require('aws-sdk');
+
+module.exports = {
+	info: info
+};
+
+
+AWS.config.loadFromPath('./config.json');
+
+function info(request, callback) {
+	var ec2 = new AWS.EC2();
+	var params = {
+		DryRun: false,
+		MaxResults: 10
+	};
+	
+	ec2.describeInstances(params, function(err, data) {
+		if (err) {
+			callback(err); 
+		}
+		else {
+			callback(null, data);
+		}
+	});
+}
