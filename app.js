@@ -1,5 +1,7 @@
+var AWS = require('aws-sdk');
+AWS.config.loadFromPath('./config.json');
 var lab1_1 = require("./lab/lab1_1").lab
-var example_1 = require("./example_1").lab;
+var example_1 = require("./lab/example_1").lab;
 
 var PORT = 8080;
 
