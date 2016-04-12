@@ -11,7 +11,7 @@ var urlMap = [
 	{path: "/", action:__dirname + "/static/index.html"},	 
 	{path: "/digest", action: lab1_1},	
 	{path: "/example_1", action: example_1}, 
-		{path: "ec2getinstance", action ec2GetInstance}
+	{path: "/ec2getinstance", action: ec2GetInstance}
 	];
 
 var service = require("./lib/service").http(urlMap);
