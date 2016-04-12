@@ -2,7 +2,7 @@ var AWS = require('aws-sdk');
 AWS.config.loadFromPath('./config.json');
 var lab1_1 = require("./lab/lab1_1").lab
 var example_1 = require("./lab/example_1").lab;
-var ec2GetInstance = require("./lab/ec2_get_instance").lab;
+var ec2GetInstance = require("./lab/ec2_get_instance").info;
 
 var PORT = 8080;
 
